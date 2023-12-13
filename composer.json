@@ -1,0 +1,18 @@
+{
+    "name": "diegoarreola/country-code-language-list",
+    "description": "List of country, languages, and codes.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Diegoarreola\\CountryCodeLanguageList\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Diego Alberto Arreola Galvan",
+            "email": "diegodaag07@gmail.com"
+        }
+    ],
+    "require": {}
+}
