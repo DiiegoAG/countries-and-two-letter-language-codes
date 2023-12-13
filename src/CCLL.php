@@ -1,7 +1,8 @@
 <?php
 namespace Diegoarreola\CountryCodeLanguageList;
+include 'countriesData.php';
 
-require './data/countriesData.php';
+define('countriesData', $countriesData);
 
 class CCLL {
 
