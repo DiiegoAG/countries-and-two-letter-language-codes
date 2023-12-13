@@ -33,6 +33,8 @@ class CCLL
 			throw new Exception('Enter a language to search');
 		}
 
+		$country_language = ucwords(strtolower($country_language));
+
 		$data = [];
 
 		foreach (countriesData as $country) {
