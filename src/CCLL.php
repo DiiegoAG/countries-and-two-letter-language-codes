@@ -42,6 +42,28 @@ class CCLL {
 		return $data;
 	}
 
+	/* Return first coincidence filtered by three language code */
+	public function searchBy2LC ($country_2lc = null) {
+		if (is_null($country_2lc) || strlen($country_2lc) != 5 && $country_2lc !== 'en') {
+			throw new Exception('Enter valid 2-letter language code');
+		}
+
+		if ($country_2lc === 'en') {
+			$country_2lc = 'en-US';
+		}
+
+		$country_2lc = explode('-', str_replace('_', '-', $country_2lc));
+		$country_2lc = strtolower($country_2lc[0]).'-'.strtoupper($country_2lc[1] ?? '');
+
+		foreach (countriesData as $country) {
+			if ($country['two_letter_code'] === $country_2lc) {
+				return $country;
+			}
+		}
+
+		return 'No match found';
+	}
+
 	}
 
 }
