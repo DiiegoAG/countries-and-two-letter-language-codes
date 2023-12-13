@@ -25,6 +25,23 @@ class CCLL {
 		return $data;
 	}
 
+	/* Return an array with countries filtered by language */
+	public function searchByLanguage ($country_language = null) {
+		if (is_null($country_language)) {
+			throw new Exception('Enter a language to search');
+		}
+
+		$data = [];
+
+		foreach (countriesData as $country) {
+			if ($country['language'] === $country_language) {
+				array_push($data, $country);
+			}
+		}
+
+		return $data;
+	}
+
 	}
 
 }
