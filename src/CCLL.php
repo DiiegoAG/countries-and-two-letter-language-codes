@@ -1,10 +1,12 @@
 <?php
 namespace Diegoarreola\CountryCodeLanguageList;
+use Exception;
 include 'countriesData.php';
 
 define('countriesData', $countriesData);
 
-class CCLL {
+class CCLL
+{
 
 	/* Return an array of coincidences finded filtering by name */
 	public function searchByName ($country_name = null) {
