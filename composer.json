@@ -1,8 +1,16 @@
 {
     "name": "diegoarreola/country-code-language-list",
-    "description": "List of country, languages, and codes.",
+    "description": "List of names, languages, and codes of all countries.",
     "type": "library",
     "license": "MIT",
+    "homepage": "https://github.com/DiiegoAG/country-code-language-list",
+    "keywords": [
+        "list",
+        "names",
+        "languages",
+        "codes",
+        "countries"
+    ],
     "autoload": {
         "psr-4": {
             "Diegoarreola\\CountryCodeLanguageList\\": "src/"
@@ -11,8 +19,10 @@
     "authors": [
         {
             "name": "Diego Alberto Arreola Galvan",
-            "email": "diegodaag07@gmail.com"
+            "homepage": "https://github.com/DiiegoAG/country-code-language-list"
         }
     ],
-    "require": {}
+    "require": {
+        "php": ">=7.4"
+    },
 }
