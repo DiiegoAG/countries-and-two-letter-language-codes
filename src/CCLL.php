@@ -1,5 +1,5 @@
 <?php
-namespace DiiegoAG\CCLL;
+namespace Diegoarreola\CountryCodeLanguageList;
 
 require './data/countriesData.php';
 
