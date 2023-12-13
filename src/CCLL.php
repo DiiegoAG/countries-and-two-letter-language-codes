@@ -64,6 +64,26 @@ class CCLL {
 		return 'No match found';
 	}
 
+	/* Return first coincidence filtered by three language code */
+	public function searchBy3LC ($country_3lc = null) {
+		if (is_null($country_3lc) || strlen($country_3lc) != 6 && $country_2lc !== 'en') {
+			throw new Exception('Enter valid 3-letter language code');
+		}
+
+		if ($country_2lc === 'en') {
+			$country_2lc = 'en-US';
+		}
+
+		$country_3lc = explode('-', str_replace('_', '-', $country_3lc));
+		$country_3lc = strtolower($country_3lc[0]).'-'.strtoupper($country_3lc[1] ?? '');
+
+		foreach (countriesData as $country) {
+			if ($country['three_letter_code'] === $country_3lc) {
+				return $country;
+			}
+		}
+
+		return 'No match found';
 	}
 
 }
